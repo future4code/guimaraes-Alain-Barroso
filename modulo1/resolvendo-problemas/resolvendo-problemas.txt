@@ -1,0 +1,29 @@
+###	7 Passos Fundamentais	###
+
+ Para ajudar à solucionar desafios de programação, podemos utilizar os 7 Passos Fundamentais para
+resolver problemas. Sendo eles:
+
+• 1) Entender o enunciado: não basta apenas ler, mas sim compreender o que o enunciando deseja como
+  resultado, pois é fundamental para dar início ao processo de escrita do código;
+
+• 2) Obter dados que sejam relevantes: o texto de enunciado pode nos trazer informações importantes
+  que podedm ser utilizadas como base ou parâmetro na estruturação do código;
+
+• 3) Pensar nas Entradas e Saídas: analisar as informações que o código irá receber como entrada ou
+  parâmetro para o possível retorno desejado;
+
+• 4) Criar um esquema visual: a criação de um esquema visual pode ser uma ferramenta facilitadora
+  para entender o problema e estruturar a solução;
+
+• 5) Criar um esboço: este é o momento de colocar tudo em prática e iniciar a escrita do código. 
+  O código pode ser alterado com melhorias de desempenho futuramente, então não é necessário se 
+  preocupar com isso por enquanto;
+
+• 6) Testar Força-Bruta: etapa de testes óbvios para respostas rápidas e verificar as funcionalidades
+  do código. Durante este processo, também podemos transcrever o código para o inglês e deixá-lo padronizado;
+
+• 7) Refatorar: neste último passo, podemos passar a limpo todo o código para 'debugar', implementar melhorias e
+  verificar a aplicação de boas práticas antes de finalizar a escrita do programa.
+
+ Estes passos são uma ótima opção para darmos um ponta pé inicial e checar detalhadamenta a funcionalidade do nosso
+código, antes de chegarmos ao 'produto final'.
