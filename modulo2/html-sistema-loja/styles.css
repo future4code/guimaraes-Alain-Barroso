@@ -1,0 +1,93 @@
+/* ESTRUTURA */
+
+h1 {
+    text-align: center;
+}
+
+body{
+    background-color: #202020;
+    color: #ededed;
+}
+
+footer{
+    /* float: inline-end;
+    text-align: center;
+    display: block;
+    background-color: #303030;
+    margin-top: 150px; */
+
+    display: block;
+    position:static;
+    left: 0;
+    bottom:0;
+    width:100%;
+    height:100px; 
+    background:#303030;
+    color: #ededed;
+    text-align: center;
+}
+
+
+
+/* CARDS DE PRODUTO - /crtl-estoque */
+* {
+    box-sizing: border-box;
+}
+  
+.coluna {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+  
+.row {margin: 0 -5px;}
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    padding: 16px;
+    text-align: center;
+    background-color: #303030;
+}
+  
+@media screen and (max-width: 500px) {
+    .coluna {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+}
+
+
+/* NÃO FUNCIONA AINDA */
+.qtd-estoque {
+    size: 55px;
+}
+
+
+/* BARRA DE NAVEGAÇÃO */
+#barra-navegacao {
+    background-color: #ededed;
+    position: fixed;
+    width: 100%;
+    transition: top 0.3s;
+}
+
+#barra-navegacao a {
+    float: left;
+    display: block;
+    color: #303030;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+}
+  
+#barra-navegacao a:hover {
+    background-color: #ddd;
+    color: black;
+}
