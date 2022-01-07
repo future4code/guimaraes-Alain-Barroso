@@ -1,0 +1,104 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+
+/* ## HEADER ELEMENTS ## */
+header {
+    background-color: mediumvioletred;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    padding: 15px;
+    font-size: 12px;
+}
+
+
+.logo {
+    width: 18px;
+}
+
+button{
+    padding: 0px 5px 0px 5px;
+    justify-self: end;
+}
+
+
+
+
+/* ## BODY ELEMENTS ## */
+main {
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 1fr;
+    
+}
+
+nav {
+    background-color: #f2d0e0;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
+h4 {
+    padding: 10px 10px 10px 10px;
+}
+
+.nav_img{
+    width: 12px;
+}
+
+.nav_arrow{
+    width: 12px;
+    padding-left: 50px;
+    
+}
+
+div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 15px;
+    
+}
+
+.card {
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+    justify-content: center;
+    min-height: fit-content;
+    max-width: fit-content;
+
+    box-shadow: 5px 3px 3px darkgray;
+}
+
+.product_img {
+    width: 100%;
+}
+
+.product_title {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+
+.product_desc {
+    font-size: 14px;
+    text-align: center;
+}
+
+
+
+
+
+
+/* ## FOOTER ELEMENTS ## */
+footer {
+    background-color: mediumvioletred;
+    text-align: center;
+    padding: 15px;
+}
