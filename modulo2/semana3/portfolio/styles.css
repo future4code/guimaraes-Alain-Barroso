@@ -1,0 +1,42 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+    .container{
+        width: 100%;
+        height: 100%;
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+    }
+
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            scroll-snap-align: start;
+        }
+
+
+        /* CORES DE TEXTO NÃO FUNCIONANDO */
+        :nth-of-type(1){
+            background-color: #282828;
+            color: #ededed;
+        }
+
+        :nth-of-type(2){
+            background-color: #313131;
+            color: #ED145A;
+        }
+
+        :nth-of-type(3){
+            background-color: #343434;
+            color: #3AD4B6;
+        }
+
+        h1 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
