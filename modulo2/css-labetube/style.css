@@ -1,0 +1,44 @@
+header{
+    background-color: rgb(209, 125, 0);
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 15px 0px 15px;
+
+    font-weight: bold;
+    font-size: 25px;
+}
+
+body > main {
+    min-height: 100vh;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 25px;
+    padding-top: 15px;
+}
+
+.videothumb {
+    justify-content: center;
+    border-style: solid;
+}
+
+.thumb_img {
+    width: 100%;
+}
+
+.thumb_title {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+
+footer{
+    background-color: darkslateblue;
+    padding: 5px 0px 5px 15px;
+    
+    font-weight: bold;
+    font-size: 25px;
+}
