@@ -4,14 +4,14 @@ import axios from "axios";
 
 class Cadastro extends React.Component {
   state = {
-    nome: "",
+    name: "",
     email: ""
   };
 
   editarNome = event => {
     const novoNome = event.target.value;
 
-    this.setState({ nome: novoNome });
+    this.setState({ name: novoNome });
   };
 
   editarEmail = event => {
@@ -21,14 +21,14 @@ class Cadastro extends React.Component {
   };
 
   cadastrar = () => {
-    const axiosConfig = {
+    const headers = {
       headers: {
-        Authorization: "severo"
+        Authorization: "alain-christian-guimaraes"
       }
     };
 
     const body = {
-        nome: this.state.nome,
+      name: this.state.name,
       email: this.state.email
     };
 
@@ -36,15 +36,15 @@ class Cadastro extends React.Component {
       .post(
         "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users",
         body,
-        axiosConfig
+        headers
       )
       .then(() => {
-        alert(`Usuário ${this.state.nome} cadastrado no sistema.`);
-        this.setState({ nome: "", email: "" });
+        alert(`Usuário ${this.state.name} cadastrado no sistema.`);
+        this.setState({ name: "", email: "" });
       })
-      .catch(error => {
+      .catch(err => {
         alert("Erro ao criar cadastro.");
-        console.log(error);
+        console.log(err);
       });
   };
 
@@ -54,7 +54,7 @@ class Cadastro extends React.Component {
             <input
             placeholder="Nome"
             type="text"
-            value={this.state.nome}
+            value={this.state.name}
             onChange={this.editarNome}
             />
 

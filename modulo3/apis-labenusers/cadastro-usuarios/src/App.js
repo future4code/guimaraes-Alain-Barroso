@@ -4,23 +4,23 @@ import Usuarios from "./components/Usuarios";
 
 export default class App extends React.Component {
   state = {
-    pagina: "paginaCadastro"
-  };
+    pagina: "cadastro"
+  }
 
   mudarPagina = () => {
-    if (this.state.pagina === "paginaCadastro") {
-      this.setState({ pagina: "usuariosCadastrados" });
+    if (this.state.pagina === "cadastro") {
+      this.setState({ pagina: "usuarios" })
     } else {
-      this.setState({ pagina: "paginaCadastro" });
+      this.setState({ pagina: "cadastro" })
     }
-  };
+  }
 
   render() {
     return (
       <div>
         <button onClick={this.mudarPagina}>Trocar de pagina</button>
-        {this.state.pagina === "paginaCadastro" ? <Cadastro /> : <Usuarios />}
+        {this.state.pagina === "cadastro" ? <Cadastro /> : <Usuarios />}
       </div>
-    );
+    )
   }
 }

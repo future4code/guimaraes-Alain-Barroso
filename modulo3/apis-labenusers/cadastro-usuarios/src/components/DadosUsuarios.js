@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import axios from "axios";
 
-const axiosConfig = {
+const headers = {
   headers: {
-    Authorization: "severo"
+    Authorization: "alain-christian-guimaraes"
   }
 };
 
@@ -12,7 +12,7 @@ class DadosUsuarios extends React.Component {
   state = {
     dadosCadastrados: {},
     editar: "botaoEditar",
-    nome: "",
+    name: "",
     email: ""
   };
 
@@ -26,7 +26,7 @@ class DadosUsuarios extends React.Component {
         `https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${
           this.props.userId
         }`,
-        axiosConfig
+        headers
       )
       .then(response => {
         this.setState({ dadosCadastrados: response.data });
@@ -47,7 +47,7 @@ class DadosUsuarios extends React.Component {
   editarNome = event => {
     const novoNome = event.target.value;
 
-    this.setState({ nome: novoNome });
+    this.setState({ name: novoNome });
   };
 
   editarEmail = event => {
@@ -58,7 +58,7 @@ class DadosUsuarios extends React.Component {
 
   cadastrarUsuario = () => {
     const body = {
-      name: this.state.nome,
+      name: this.state.name,
       email: this.state.email
     };
 
@@ -68,13 +68,13 @@ class DadosUsuarios extends React.Component {
           this.props.userId
         }`,
         body,
-        axiosConfig
+        headers
       )
       .then(() => {
-        this.setState({ nome: "", email: "" });
+        this.setState({ name: "", email: "" });
         this.getDadosCadastrados();
         this.editarInformacoes();
-        alert(`Usuário ${this.state.nome} editado com sucesso!`);
+        alert(`Usuário ${this.state.name} editado com sucesso!`);
       })
       .catch(error => {
         alert("Erro ao criar o usuário");
@@ -91,7 +91,7 @@ class DadosUsuarios extends React.Component {
           <input
             placeholder="Nome"
             type="text"
-            value={this.state.nome}
+            value={this.state.name}
             onChange={this.editarNome}
           />
           <input
@@ -107,7 +107,7 @@ class DadosUsuarios extends React.Component {
     return (
       <div>
         <div>
-          <p>{this.state.dadosCadastrados.nome}</p>
+          <p>{this.state.dadosCadastrados.name}</p>
           <p>{this.state.dadosCadastrados.email}</p>
         </div>
         <div>{editar}</div>

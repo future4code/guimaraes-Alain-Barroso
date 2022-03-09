@@ -3,14 +3,14 @@ import styled from "styled-components";
 import axios from "axios";
 import DadosUsuarios from "./DadosUsuarios";
 
-const iconeDeletar = styled.span`
-  color: red;
+const botaoDeletar = styled.span`
+  color: red
   cursor: pointer;
 `;
 
-const axiosConfig = {
+const headers = {
   headers: {
-    Authorization: "severo"
+    Authorization: "alain-christian-guimaraes"
   }
 };
 
@@ -19,7 +19,7 @@ class Usuarios extends React.Component {
     usuarios: [],
     pagina: "usuarios",
     userId: "",
-    nome: ""
+    name: ""
   };
 
   componentDidMount() {
@@ -30,7 +30,7 @@ class Usuarios extends React.Component {
     axios
       .get(
         "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users",
-        axiosConfig
+        headers
       )
       .then(response => {
         this.setState({ usuarios: response.data });
@@ -42,7 +42,7 @@ class Usuarios extends React.Component {
       axios
         .delete(
           `https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${userId}`,
-          axiosConfig
+          headers
         )
         .then(() => {
           alert("Usuário excluido com sucesso!");
@@ -65,22 +65,18 @@ class Usuarios extends React.Component {
   editarNome = event => {
     const novoNome = event.target.value;
 
-    this.setState({ nome: novoNome });
+    this.setState({ name: novoNome });
   };
 
   buscarUser = () => {
-    axios
-      .get(
-        `https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/search?name=${this.state.name
-        }& email = ` , 
-        axiosConfig
+    axios.get( `https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/search?name=${this.state.name}& email = ` , headers
       )
       .then(response => {
         this.setState({ usuarios: response.data });
       })
-      .catch(error => {
+      .catch(err => {
         alert("Erro ao criar o usuário");
-        console.log(error);
+        console.log(err);
       });
   };
 
@@ -95,13 +91,9 @@ class Usuarios extends React.Component {
                 return (
                   <li>
                     <span onClick={() => this.trocarPagina(user.id)}>
-                      {user.nome}
+                      {user.name}
                     </span>
-                    <iconeDeletar
-                      onClick={() => this.deletarUsuario(user.id)}
-                    >
-                      X
-                    </iconeDeletar>
+                    <botaoDeletar onClick={() => this.deletarUsuario(user.id)}> X </botaoDeletar>
                   </li>
                 );
               })}
@@ -111,10 +103,10 @@ class Usuarios extends React.Component {
             <input
               placeholder="Nome que deseja procurar"
               type="text"
-              value={this.state.nome}
+              value={this.state.name}
               onChange={this.editarNome}
             />
-            <button onClick={this.buscarUser}>Salvar</button>
+            <button onClick={this.buscarUser}>Procurar</button>
           </div>
         ) : (
           <DadosUsuarios userId={this.state.userId} trocarPagina={this.trocarPagina} />
