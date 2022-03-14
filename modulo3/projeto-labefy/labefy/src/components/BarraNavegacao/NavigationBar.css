@@ -1,0 +1,15 @@
+.NavigationBar {
+    width: 100vw;
+    background: black;
+    opacity: 0.80;
+    color: white;
+    position: fixed;
+    top: 0;
+}
+
+.Nav {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 10%;
+    
+}
