@@ -7,6 +7,3 @@ export default class Pesquisar extends React.Component {
   
     }
   }
-
-
-

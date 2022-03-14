@@ -1,0 +1,49 @@
+.StyledButton {
+	/* display: block; */
+	margin: 5px;
+    padding: 0;
+	width: 150px;
+	height: 50px;
+	border: 2px solid #00eeff;
+	border-radius: 40px;
+	background: transparent;
+	color: #00eeff;
+	letter-spacing: 1px;
+	font-size: 80%;
+	-webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+	transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+}
+
+.CreateButton {
+	/* display: block; */
+	margin: 5px;
+    padding: 0;
+	width: 50px;
+	height: 35px;
+	border: 2px solid #00eeff;
+	border-radius: 25px;
+	background: transparent;
+	color: #00eeff;
+	letter-spacing: 1px;
+	font-size: 60%;
+	-webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+	transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+}
+
+.TextBox {
+	/* display: block; */
+	margin: 5px;
+	margin-top: 4%;
+    padding-left: 5%;
+	width: 79%;
+	max-width: 20vw;
+	height: 35px;
+	border: 2px solid #00eeff;
+	border-radius: 25px;
+	background: rgba(0, 0, 0, 0.705);
+	color: #ffffff;
+	letter-spacing: 1px;
+	font-size: 80%;
+	-webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+	transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+}

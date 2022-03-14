@@ -1,0 +1,18 @@
+.HomePage {
+    background: rgb(235,4,107);
+    background: linear-gradient(90deg, rgba(235,4,107,1) 0%, rgba(103,5,235,1) 100%);
+    height: 100%;
+    width: 60vw;
+    padding: 17% 20%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    justify-self: center;
+}
+
+h1 {
+    justify-self: center;
+}
