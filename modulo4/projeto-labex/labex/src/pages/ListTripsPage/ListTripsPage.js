@@ -1,11 +1,16 @@
 import React from 'react'
-
+import { useNavigate } from 'react-router-dom'
 
 const ListTripsPage = () => {
+    const navigate = useNavigate()
 
+    const goToHomePage = () => (
+        navigate('/')
+
+    )
     return (
         <div>
-            <button>Início</button>
+            <button onClick={goToHomePage}>Início</button>
             <button>Faz parte da tripulação? Faça o Login</button>
             {/* <button>Criar conta</button> */}
                 
