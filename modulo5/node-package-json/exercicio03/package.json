@@ -1,0 +1,13 @@
+{
+    "name": "exercicio03",
+    "version": "1.0.0",
+    "description": "aula-node",
+    "main": "exercicio03.js",
+    "type": "module",
+    "scripts": {
+      "start": "node ./index.js"
+    },
+    "author": "Alain Christian Barroso",
+    "license": "ISC"
+  }
+  
