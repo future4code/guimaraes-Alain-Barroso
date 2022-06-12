@@ -1,53 +1,69 @@
 export type USER = {
-    id:number,
-    name:string,
     cpf:string,
     birthDate:string,
+    id:number,
+    name:string,
     balance:number,
-    extract: EXTRACT
-}
+    extract: EXTRACT}
 
 type EXTRACT ={
     value:number,
     date:string,
-    desc:string
-}
+    desc:string}
 
 export const usersData:USER[]=[
     {
         id: 1,
-        name: "João Siqueira",
-        cpf: "111.111.111-11",
-        birthDate: "08/07/1987",
-        balance:1340,
+        name: "Alain Christian",
+        cpf: "122.344.544.78",
+        birthDate: "17/03/1999",
+        balance:321,
         extract: {
             value: 0,
             date: "",
-            desc: ""
-        }
-    },
+            desc: ""}},
+    
     {
         id: 2,
-        name: "Alice Silva",
-        cpf: "222.222.222-22",
-        birthDate: "04/12/1954",
-        balance:438,
-        extract: {
-            value: 0,
-            date: "",
-            desc: ""
-        }
-    },
-    {
-        id: 3,
-        name: "Bruno Silveira",
-        cpf: "333.333.333-33",
-        birthDate: "05/04/2002",
+        name: "Elon Musk",
+        cpf: "988.766.544.32",
+        birthDate: "28/06/1971",
         balance:0,
         extract: {
             value: 0,
             date: "",
-            desc: ""
-        }
-    },
+            desc: ""}},
+    
+    {
+        id: 3,
+        name: "Steve Jobs",
+        cpf: "123.456.789.01",
+        birthDate: "24/06/1955",
+        balance:24061955,
+        extract: {
+            value: 0,
+            date: "",
+            desc: ""}},
+    
+    {
+        id: 4,
+        name: "Bill Gates",
+        cpf: "281.101.195.50",
+        birthDate: "28/10/1955",
+        balance:28101955,
+        extract: {
+            value: 0,
+            date: "",
+            desc: ""}},
+
+    {
+        id: 5,
+        name: "Warren Buffett",
+        cpf: "190.442.555.10",
+        birthDate: "30/08/1930",
+        balance:9950,
+        extract: {
+            value: 0,
+            date: "",
+            desc: ""}},
 ]
