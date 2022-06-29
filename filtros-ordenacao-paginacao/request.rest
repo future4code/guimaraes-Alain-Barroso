@@ -1,0 +1,14 @@
+// DEFAULT
+GET http://localhost:3003/users?name=j
+###
+// FILTER
+GET http://localhost:3003/users/:type=Operations
+###
+// ORDER
+GET http://localhost:3003/recipes?sort=title&order=DESC
+###
+// PAGE
+GET http://localhost:3003/recipes?size=6&page=1
+###
+// ALL
+GET http://localhost:3003/recipes?title=sopa&sort=title&order=ASC&size=1&page=1
