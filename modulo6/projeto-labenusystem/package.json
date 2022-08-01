@@ -1,0 +1,31 @@
+{
+    "name": "servicos",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "npx tsc && node ./build/index.js",
+      "dev": "ts-node-dev ./src/index.ts"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "@types/cors": "^2.8.12",
+      "@types/express": "^4.17.13",
+      "@types/knex": "^0.16.1",
+      "@types/nodemailer": "^6.4.4",
+      "knex": "^2.0.0",
+      "mysql": "^2.18.1",
+      "ts-node-dev": "^1.1.8",
+      "typescript": "^4.6.3"
+    },
+    "dependencies": {
+      "cors": "^2.8.5",
+      "dotenv": "^16.0.0",
+      "express": "^4.17.3",
+      "heroku": "^7.60.1",
+      "nodemailer": "^6.7.3"
+    }
+  }
